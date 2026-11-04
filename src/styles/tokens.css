@@ -1,0 +1,102 @@
+/* G2 · Command / Insights — design tokens.
+   «Swiss terminal»: warm paper, carbon ink, one signal orange, teal for data, hairline rules, square corners,
+   tabular numbers and mono micro-labels. Light is the default; dark is graphite.
+   The old token names (--card, --ink, --highlight…) are kept and re-pointed so every older page renders
+   in this system without edits. */
+:root, [data-theme='light'] {
+  --bg: #f1f0eb;
+  --bg-grid: rgba(17, 19, 21, .045);
+  --card: #ffffff;
+  --card-2: #f4f3ef;
+  --card-hover: #f8f7f3;
+  --sunken: #ebeae4;
+  --line: #e1dfd7;
+  --line-2: #c9c6bb;
+  --rule: #111315;
+  --ink: #111315;
+  --ink-2: #474a4e;
+  --ink-3: #66696d;
+  --signal: #ff5a1f;
+  --accent: #c2410c;
+  --accent-soft: rgba(255, 90, 31, .12);
+  --teal: #0e7c74;
+  --teal-soft: rgba(14, 124, 116, .12);
+  --highlight: #ff5a1f;
+  --highlight-ink: #111315;
+  --highlight-ink-2: rgba(17, 19, 21, .72);
+  --active: #111315;
+  --active-ink: #ffffff;
+  --good: #0f7b5f; --good-soft: #e1f2ec;
+  --warn: #9a5800; --warn-soft: #fbefd9;
+  --bad: #c2281f;  --bad-soft: #fbe3e0; --bad-solid: #c2281f;
+  --info: #2b59c3; --info-soft: #e5ecfa;
+  --cnt-ink: #ffffff;
+  --glass: rgba(241, 240, 235, .86);
+  --scrim: rgba(17, 19, 21, .38);
+  --shadow-pop: 0 1px 0 rgba(17, 19, 21, .04), 0 12px 32px rgba(17, 19, 21, .14), 0 0 0 1px var(--line-2);
+  --shadow-1: 0 1px 0 rgba(17, 19, 21, .04);
+  --heat-0: #cfccc1; --heat-1: #bfae95; --heat-2: #e2a272; --heat-3: #ea8a50; --heat-4: #ef6f30; --heat-5: #e0541a; --heat-6: #b8410f; --heat-7: #0f7b5f;
+  --hatch: rgba(17, 19, 21, .05);
+  --bar-ink: #0c0d0e;
+  --bar-ink-2: #9a9c99;
+  --bar-line: #26292c;
+  --d1: #111315; --d2: #ff5a1f; --d3: #0e7c74; --d4: #8a8d8f; --d5: #e3b23c; --d6: #2b59c3;
+  color-scheme: light;
+}
+[data-theme='dark'] {
+  --bg: #0d0e0f;
+  --bg-grid: rgba(237, 237, 232, .035);
+  --card: #151719;
+  --card-2: #1c1f21;
+  --card-hover: #1a1d1f;
+  --sunken: #101213;
+  --line: #272a2d;
+  --line-2: #3a3e42;
+  --rule: #edede8;
+  --ink: #edede8;
+  --ink-2: #b4b6b2;
+  --ink-3: #8c8f8d;
+  --signal: #ff6a2e;
+  --accent: #ff7a3d;
+  --accent-soft: rgba(255, 106, 46, .16);
+  --teal: #3cc5b6;
+  --teal-soft: rgba(60, 197, 182, .14);
+  --highlight: #ff6a2e;
+  --highlight-ink: #0d0e0f;
+  --highlight-ink-2: rgba(13, 14, 15, .72);
+  --active: #edede8;
+  --active-ink: #0d0e0f;
+  --good: #3fc497; --good-soft: rgba(63, 196, 151, .14);
+  --warn: #f0b04a; --warn-soft: rgba(240, 176, 74, .14);
+  --bad: #ff6b5e;  --bad-soft: rgba(255, 107, 94, .14); --bad-solid: #d0362b;
+  --info: #7c9cff; --info-soft: rgba(124, 156, 255, .14);
+  --cnt-ink: #0d0e0f;
+  --glass: rgba(13, 14, 15, .84);
+  --scrim: rgba(0, 0, 0, .6);
+  --shadow-pop: 0 14px 40px rgba(0, 0, 0, .55), 0 0 0 1px var(--line-2);
+  --shadow-1: none;
+  --heat-0: #3a3d40; --heat-1: #6b5d48; --heat-2: #9a6a45; --heat-3: #c0703f; --heat-4: #e06b33; --heat-5: #ff6a2e; --heat-6: #ff8a52; --heat-7: #3fc497;
+  --hatch: rgba(237, 237, 232, .05);
+  --bar-ink: #070808;
+  --bar-ink-2: #8c8f8d;
+  --bar-line: #222527;
+  --d1: #edede8; --d2: #ff6a2e; --d3: #3cc5b6; --d4: #7a7d7f; --d5: #e3b23c; --d6: #7c9cff;
+  color-scheme: dark;
+}
+:root {
+  --m-y: #e3b23c; --m-o: #ff5a1f; --m-p: #c2410c; --m-v: #0e7c74; --m-b: #2b59c3;
+  --grad: linear-gradient(90deg, var(--signal), var(--signal));
+  --grad-btn: linear-gradient(0deg, var(--signal), var(--signal));
+  --grad-soft: var(--card-2);
+  --dot-1: #c2281f; --dot-2: #ef6f30; --dot-3: #e3b23c; --dot-4: #6aa86a; --dot-5: #0f7b5f;
+  --f-display: 'Space Grotesk', 'Tajawal', system-ui, sans-serif;
+  --f-display-ar: 'Tajawal', 'Space Grotesk', system-ui, sans-serif;
+  --f-body: 'Inter', 'Tajawal', system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
+  --f-num: 'Space Grotesk', 'Inter', sans-serif;
+  --f-mono: ui-monospace, 'SFMono-Regular', 'JetBrains Mono', 'Cascadia Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  --r-card: 4px; --r-l: 4px; --r-m: 3px; --r-s: 2px; --r-xs: 2px;
+  --ease: cubic-bezier(.2, .7, .1, 1);
+  --t-fast: 120ms; --t-med: 180ms; --t-slow: 260ms;
+  --bar-h: 48px; --nav-w: 236px;
+  --header-h: 48px; --rail-w: 236px;
+}

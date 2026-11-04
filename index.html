@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#f1f0eb" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <!-- Installed on iPhone: full screen, dark status bar over the app, Arabic name under the icon. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Magmafy" />
+    <meta name="application-name" content="Magmafy CRM" />
+    <title>Magmafy CRM · G2</title>
+    <script>
+      /* Apply the saved theme and language before first paint (no flash). Light is the default. */
+      (function () {
+        try {
+          var t = localStorage.getItem("mg-crm-theme") || "light";
+          if (t === 'auto') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', t);
+          var l = localStorage.getItem('mg-crm-lang');
+          if (l === 'en') { document.documentElement.lang = 'en'; document.documentElement.dir = 'ltr'; }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Magmafy CRM needs JavaScript.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

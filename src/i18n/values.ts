@@ -1,0 +1,33 @@
+// English labels for the Arabic list values stored in the sheet («القوائم» tab and the new tabs).
+export const VALUES: Record<string, string> = {
+  'محتمل': 'Prospect', 'متوقع': 'Expected', 'حالي': 'Client',
+  'جديد': 'New', 'تم التواصل': 'Contacted', 'اجتماع محجوز': 'Meeting booked', 'تم الاجتماع': 'Met', 'عرض مرسل': 'Proposal sent',
+  'تفاوض': 'Negotiation', 'فترة تجريبية': 'Trial', 'عميل نشط': 'Active client', 'متوقف': 'Paused', 'خسرناه': 'Lost',
+  'عالية': 'High', 'متوسطة': 'Medium', 'منخفضة': 'Low',
+  'معرض أثاث': 'Furniture showroom', 'متجر أونلاين': 'Online store', 'مصنع أثاث': 'Furniture factory', 'مكتب تصميم داخلي': 'Interior design studio',
+  'ديكور ومستلزمات منزلية': 'Decor & homeware', 'مطابخ وأبواب': 'Kitchens & doors', 'أخرى': 'Other', 'غير محدد': 'Unspecified',
+  'السعودية': 'Saudi Arabia', 'الإمارات': 'UAE', 'الكويت': 'Kuwait', 'قطر': 'Qatar', 'البحرين': 'Bahrain', 'عُمان': 'Oman', 'مصر': 'Egypt',
+  'حجز من الموقع': 'Website booking', 'فحص الجاهزية': 'Readiness quiz', 'واتساب': 'WhatsApp', 'إنستجرام': 'Instagram', 'تيك توك': 'TikTok',
+  'سناب شات': 'Snapchat', 'إعلان ممول': 'Paid ad', 'ترشيح': 'Referral', 'تواصل مباشر (Outreach)': 'Outreach', 'دراسة السوق': 'Market research',
+  'معرض / فعالية': 'Exhibition / event',
+  'المحتوى والإعلانات': 'Content & ads', 'المواقع والمعارض 3D': 'Websites & 3D showrooms', 'الاستشارات': 'Consulting', 'باقة متكاملة': 'Full package',
+  'السعر': 'Price', 'التوقيت': 'Timing', 'اختار منافس': 'Chose a competitor', 'لا يرد': 'Not responding', 'غير مناسب لنا': 'Not a fit',
+  'الميزانية': 'Budget', 'أجّل القرار': 'Postponed decision',
+  'مؤكد': 'Confirmed', 'تم': 'Done', 'لم يحضر': 'No-show', 'أعيدت جدولته': 'Rescheduled', 'ملغي': 'Cancelled',
+  'مفتوحة': 'Open', 'تمت': 'Done', 'ملغاة': 'Cancelled',
+  'إيميل': 'Email', 'مكالمة': 'Call', 'اجتماع': 'Meeting', 'ملاحظة': 'Note', 'تغيير مرحلة': 'Stage change', 'نظام': 'System',
+  'وارد': 'Inbound', 'صادر': 'Outbound', 'داخلي': 'Internal',
+  'أدمن': 'Admin', 'مبيعات': 'Sales', 'مدير حساب': 'Account manager', 'محتوى': 'Content',
+  'معلومة': 'Info', 'مهم': 'Important', 'عاجل': 'Urgent',
+  'مسودة': 'Draft', 'مجدول': 'Scheduled', 'منشور': 'Published', 'مؤرشف': 'Archived',
+  'مباشرة': 'Direct', 'مجموعة': 'Group', 'عميل': 'Client', 'إعلان': 'Announcement', 'مقفولة': 'Closed',
+  'رسالة': 'Message', 'منشن': 'Mention', 'مهمة مسندة': 'Task assigned', 'عميل مسند': 'Client assigned', 'اجتماع جديد': 'New meeting', 'طلب انضمام': 'Access request',
+  'إنشاء': 'Create', 'تعديل': 'Update', 'حذف': 'Delete', 'دخول': 'Sign in', 'خروج': 'Sign out', 'إرسال': 'Send',
+  'الشيت': 'Sheet', 'الموقع': 'Website', 'اتقبل': 'Accepted', 'اترفض': 'Rejected',
+  'دراسة السوق ': 'Market research', 'نطاق الموقع': 'Website scope', 'استشارة عامة': 'General consultation',
+  'السوق': 'Market', 'المحتوى': 'Content', 'الإعلانات': 'Ads', 'الرد': 'Replies', 'القياس': 'Tracking',
+  'الكل': 'Everyone', 'بدون سبب': 'No reason',
+  // quotes, invoices and payments
+  'اتبعت': 'Sent', 'اتفتح': 'Opened', 'اتوافق عليه': 'Approved', 'انتهى': 'Expired', 'مجدولة': 'Scheduled', 'مدفوعة جزئيًا': 'Partly paid', 'مدفوعة': 'Paid',
+  'ملغية': 'Void', 'شهري': 'Monthly', 'مرة واحدة': 'One-time', 'مالية': 'Finance', 'تحويل بنكي': 'Bank transfer', 'كاش': 'Cash'
+};

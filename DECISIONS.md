@@ -1,0 +1,18 @@
+# Decisions
+
+Short records of choices made while building, and why.
+
+1. **Backend in the same repo, tested against the site's schemas.** The Apps Script files live in `backend/` and are pasted into the sheet's script project. `backend/test/gas-sim.ts` stands in for the Apps Script services so `npm test` runs the real `.gs` files and validates every answer with `src/api/schemas.ts`: a contract break fails CI before it reaches the team.
+2. **Inline i18n `t('ar','en')` instead of JSON message files.** Both strings sit at the call site, so nothing goes missing silently and the Arabic copy reads naturally in review. Sheet values (stage names, statuses) are stored in Arabic and translated for display via `i18n/values.ts`.
+3. **Global CSS with tokens instead of CSS Modules.** The kit's components (notched cards, pills, chips, schedule bar) are shared everywhere. One stylesheet plus `data-theme` tokens keeps dark/light and RTL/LTR consistent with logical properties.
+4. **In-app mock API instead of MSW.** `VITE_MOCK=1` swaps the transport for an in-browser implementation of every function, persisted to localStorage. It needs no service worker and makes demo builds that open from a plain folder.
+5. **Incremental rendering instead of full virtualization.** Lists render in pages ("show more") and the heavy pages are lazy-loaded. Team-scale data (hundreds to low thousands of leads) does not need a virtual scroller.
+6. **Gold highlight `#feda75` instead of the kit's lime.** It comes from the magmafy-pro palette, so the highlighted card stays on-brand.
+7. **3D is progressive but always the real volcano.** three.js loads lazily at idle. On slow devices the particle count is cut (down to a quarter) and the animation keeps running. Reduced motion freezes one frame. Only «off» or no WebGL draw the same particles once on a 2D canvas. There is no SVG substitute.
+8. **All times are Riyadh (UTC+3)** regardless of device timezone, matching the sheet.
+9. **Session token in localStorage, short-lived, server-validated.** The OTP flow (`crmRequestCode` → `crmVerifyCode`) is used, with no passwords. The token is revoked by `crmLogout` and expires server-side.
+10. **Notifications and chat poll; no push.** Apps Script can't hold a socket, so the site polls `crmPulse`, which is cached per person and invalidated whenever something changes for them (`bump_`). That keeps sheet reads low.
+11. **Service worker updates wait for the user.** A new version is precached but not activated until «حدّث» (or every tab closes): GitHub Pages removes the old hashed files on deploy, so swapping workers under an open page could break lazy-loaded screens. First install never reloads the page.
+12. **Offline data is the last bootstrap only, tied to the session token.** Enough to open the app and read; writes need a connection. `session.clear()` deletes it on sign-out.
+13. **Push without payload.** Apps Script has no ECDH / AES-GCM, so pushes are empty wake-ups and the service worker fetches the content with the session it was given (cache «mg-auth»). Only ES256 is implemented (BigInt P-256, verified against Node crypto in tests). Bonus: message text never passes through Google/Apple push servers.
+14. **Private source, public build.** The code lives in the private repo `Magmafy-CRM-source`; CI builds it and force-pushes only `dist` (one commit, no history, no source maps) to the public repo `Magmafy-CRM`, whose Pages serves `https://mrvoroo.github.io/Magmafy-CRM/`. Secret `SITE_TOKEN` = fine-grained token, Contents read/write on the public repo only. If it expires, deploys fail at «publish»: make a new one the same way.
