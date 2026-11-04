@@ -1,0 +1,28 @@
+{
+  "id": "./",
+  "name": "Magmafy CRM",
+  "short_name": "Magmafy",
+  "description": "إدارة عملاء ومبيعات فريق Magmafy",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "orientation": "any",
+  "background_color": "#0e0716",
+  "theme_color": "#0e0716",
+  "dir": "rtl",
+  "lang": "ar",
+  "categories": ["business", "productivity"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "جهات الاتصال", "short_name": "العملاء", "url": "./#/contacts", "icons": [{ "src": "icon-96.png", "sizes": "96x96", "type": "image/png" }] },
+    { "name": "جدولك", "short_name": "الجدول", "url": "./#/schedule", "icons": [{ "src": "icon-96.png", "sizes": "96x96", "type": "image/png" }] },
+    { "name": "المهام", "short_name": "المهام", "url": "./#/tasks", "icons": [{ "src": "icon-96.png", "sizes": "96x96", "type": "image/png" }] },
+    { "name": "المحادثات", "short_name": "المحادثات", "url": "./#/inbox", "icons": [{ "src": "icon-96.png", "sizes": "96x96", "type": "image/png" }] }
+  ]
+}
